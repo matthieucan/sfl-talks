@@ -244,6 +244,34 @@ CMD /usr/bin/a-great-package
   * Repo de l'application Flask : http://is.gd/sfl_lab
   * Port utilisé par le serveur integré de Flask : .remark-code[5000]
 
+---
+
+# Solution du lab
+
+## Dockerfile
+
+.remark-code[
+<pre>
+FROM ubuntu
+MAINTAINER Vous &lt;<span></span>vous@chezvous.org&gt;
+
+RUN apt-get install -y git python python-flask python-sqlalchemy
+RUN cd /opt && git clone http://is.gd/sfl_lab
+
+EXPOSE 5000
+CMD cd /opt/shrink.this.url && python run.py
+]
+
+## Commandes
+
+.remark-code[
+<pre>
+# docker build -t my_flask_app .
+# docker run -i -t my_flask_app
+</pre>
+]
+
+
    </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
     </script>
