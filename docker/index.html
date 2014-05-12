@@ -155,8 +155,8 @@ Vendredi 16 mai 2014
 
 # Sommaire
 
-1. Presentation
-2. AUFS - Le systeme de fichiers
+1. Présentation
+2. AUFS - Le système de fichiers
 3. LXC - Les containers Linux
 4. Commandes Docker
 5. Dockerfile
@@ -164,7 +164,7 @@ Vendredi 16 mai 2014
 
 ---
 
-# Presentation : L'ecosysteme Docker
+# Présentation : L'écosystème Docker
 
 * Images
 * Containers
@@ -175,16 +175,16 @@ Vendredi 16 mai 2014
 
 # Objectifs de Docker
 
-* Se debarasser des contraintes d'environnement avec une installation automatisee
-* Creer facilement des images transportables, archivables, reutilisables
+* Se débarasser des contraintes d'environnement avec une installation automatisée
+* Créer facilement des images transportables, archivables, réutilisables
 * Isoler des programmes sans utiliser de machine virtuelle
 
 # Cas d'usage
 
 * Suites unitaires
-* Integration continue
+* Intégration continue
 * Platform as a service
-* Production (bientot...)
+* Production (bientôt...)
 
 ---
 
@@ -203,10 +203,10 @@ Vendredi 16 mai 2014
 # Commandes Docker
 
 * .remark-code[docker] - liste les commandes
-* .remark-code[docker run -i -t ubuntu bash] - telecharge l'image Ubuntu et lance un container avec Bash
+* .remark-code[docker run -i -t ubuntu bash] - télécharge l'image Ubuntu et lance un container avec Bash
 * .remark-code[docker ps] - liste les containers actifs
 * .remark-code[docker inspect id] - renvoie des informations sur le container
-* .remark-code[docker build -t tag .] - construit l'image a partir du Docker file dans le repertoire courant
+* .remark-code[docker build -t tag .] - construit l'image à partir du Docker file dans le répertoire courant
 * .remark-code[docker run -i -t tag] - lance le container fraichement construit
 * .remark-code[docker kill id] - termine un container
 
@@ -214,12 +214,12 @@ Vendredi 16 mai 2014
 
 # Commandes Dockerfile
 
-* .remark-code[FROM] - herite une image
+* .remark-code[FROM] - hérite une image
 * .remark-code[RUN] - lance une commande
 * .remark-code[ADD] - ajoute un fichier dans l'image
 * .remark-code[EXPOSE] - expose un port
 * .remark-code[ENV] - modifie une variable d'environnement
-* .remark-code[CMD, ENTRYPOINT] - processus lance au demarrage
+* .remark-code[CMD, ENTRYPOINT] - processus lancé au demarrage
 
 &nbsp;
 
@@ -240,8 +240,9 @@ CMD /usr/bin/a-great-package
 
 * Objectif : faire rouler une application Flask
 * Indices :
-  * Dependences : .remark-code[python python-flask python-sqlalchemy]
+  * Dépendences : .remark-code[python python-flask python-sqlalchemy]
   * Repo de l'application Flask : http://is.gd/sfl_lab
+  * Port utilisé par le serveur integré de Flask : .remark-code[5000]
 
    </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
