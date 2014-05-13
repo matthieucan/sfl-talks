@@ -256,13 +256,22 @@ CMD /usr/bin/a-great-package
 
 ---
 
+# Commandes moins de base
+
+* .remark-code[docker logs] - Affiche stdout du conteneur
+* .remark-code[docker top] - Affiche top pour le conteneur
+* .remark-code[docker attach] - S'attache à un conteneur en exécution (screen-esque)
+
+---
+
 # Lab
 
 * Objectif : faire rouler une application Flask
 * Indices :
   * Dépendences : .remark-code[python python-flask python-sqlalchemy]
-  * Repo de l'application Flask : http://is.gd/sfl_lab
-  * Port utilisé par le serveur integré de Flask : .remark-code[5000]
+  * Repo de l'application Flask : github.com/matthieucan/shorturl
+  * Il faut initialiser la base de données: .remark-code[python init_db.py]
+  * Lancez flask avec .remark-code[python --ip 0.0.0.0 --port 5000 run.py]
 
 ---
 
@@ -273,13 +282,14 @@ CMD /usr/bin/a-great-package
 .remark-code[
 <pre>
 FROM ubuntu
-MAINTAINER Vous &lt;<span></span>vous@chezvous.org&gt;
+
+MAINTAINER Spider Pig <<span/>spider.pig@cochonbiensingulier.org>
 
 RUN apt-get install -y git python python-flask python-sqlalchemy
-RUN cd /opt && git clone http://is.gd/sfl_lab
+RUN cd /opt && git clone https://github.com/matthieucan/shorturl
+RUN cd /opt/shorturl; python init_db.py
 
-EXPOSE 5000
-CMD cd /opt/shrink.this.url && python run.py
+CMD cd /opt/shorturl; python run.py --ip 0.0.0.0 --port 5000
 ]
 
 ## Commandes
