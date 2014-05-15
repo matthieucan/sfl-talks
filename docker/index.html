@@ -142,9 +142,9 @@ class: left, middle, inverse
 
 </code></pre>
 
-Vendredi 16 mai 2014
+<em>Vendredi 16 mai 2014</em>
 
-<em>mcaneill, ppepos</em>
+mcaneill, ppepos | Merci à Stéphane et Arthur !
 
 &nbsp;
 
@@ -201,7 +201,31 @@ Vendredi 16 mai 2014
 
 # <strong>A</strong>nother <strong>U</strong>nion <strong>F</strong>ile <strong>S</strong>ystem
 
-* LOL
+* Système de fichiers par couche
+* AUFS fusionne différents disques de manière transparente
+* Gestion des conflits, Round Robin Policy
+* Mise à jour grace à "User’s Direct Branch Access"
+* .remark-code[\# mount -t aufs -o br=/tmp/foo=rw:/tmp/bar=rw -o udba=reval -o create=rr none /tmp/aufs/]
+  * Type : AUFS
+  * 2 sources en lecture/écriture : /tmp/foo et /tmp/bar
+  * Si les dossiers source sont mis à jour, AUFS le sera aussi
+  * Round Robin Policy
+  * Pas de device associé
+
+
+---
+
+# AUFS dans Docker
+
+* Pile de couches en lecture seule, couche du haut en lecture-écriture
+* La clause .remark-code[FROM foo] hérite une pile, et les autres clausent écrivent par-dessus cette pile
+* Permet le partage des images de base
+* Docker inclut également des pilotes pour d'autres systèmes de fichiers (VFS, DeviceMapper, BTRFS, ...)
+
+<div style="width: 50%; display: block; margin: auto;">
+  <img src="docker-filesystems-multilayer.png" style="width: 100%;" />
+  <em>http://docs.docker.io/terms/layer</em>
+</div>
 
 ---
 
