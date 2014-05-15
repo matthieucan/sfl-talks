@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Docker.io</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
@@ -199,7 +199,7 @@ Vendredi 16 mai 2014
 
 ---
 
-# AUFS
+# <strong>A</strong>nother <strong>U</strong>nion <strong>F</strong>ile <strong>S</strong>ystem
 
 * LOL
 
@@ -279,10 +279,10 @@ CMD /usr/bin/a-great-package
 
 * Objectif : faire rouler une application Flask
 * Indices :
-  * Dépendences : .remark-code[python python-flask python-sqlalchemy]
-  * Repo de l'application Flask : github.com/matthieucan/shorturl
-  * Il faut initialiser la base de données: .remark-code[python init_db.py]
-  * Lancez flask avec .remark-code[python --ip 0.0.0.0 --port 5000 run.py]
+  * Dépendances : (Debian/Ubuntu) .remark-code[python python-flask python-sqlalchemy]
+  * Repo de l'application Flask : .remark-code[https://github.com/matthieucan/shorturl]
+  * Il faut initialiser la base de données : .remark-code[python init_db.py]
+  * L'applications se lance avec .remark-code[python --ip 0.0.0.0 --port 5000 run.py]
 
 ---
 
@@ -292,7 +292,7 @@ CMD /usr/bin/a-great-package
 
 .remark-code[
 <pre>
-FROM ubuntu
+FROM ubuntu:trusty
 
 MAINTAINER Spider Pig <<span/>spider.pig@cochonbiensingulier.org>
 
