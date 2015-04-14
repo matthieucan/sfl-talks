@@ -1,2 +1,2 @@
-sfl-talks
+talks
 =========
